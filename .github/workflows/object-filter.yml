@@ -10,4 +10,4 @@ jobs:
           ACTION_EVENT: ${{toJson(github.event)}}
       - run: echo $VALUE
         env:
-          VALUE: ${{toJson(github.event.head_commit.*.id)}}
+          VALUE: ${{toJson(github.event.head_commit.id)}}

@@ -8,6 +8,6 @@ jobs:
       - run: echo $ACTION_EVENT
         env:
           ACTION_EVENT: ${{toJson(github.event)}}
-      - run: echo $ACTION_PUSHER
+      - run: echo $VALUE
         env:
-          ACTION_PUSHER: ${{toJson(github.event.commits.*.id)}}
+          VALUE: ${{toJson(github.event.head_commit.*.id)}}

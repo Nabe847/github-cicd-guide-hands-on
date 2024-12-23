@@ -10,4 +10,4 @@ jobs:
           ACTION_EVENT: ${{toJson(github.event)}}
       - run: echo $ACTION_PUSHER
         env:
-          ACTION_PUSHER: ${{toJson(github.event.*.pusher)}}
+          ACTION_PUSHER: ${{toJson(github.event.commits.*.id)}}
